@@ -430,7 +430,7 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-5 text-center text-xs text-slate-400">
-        <p>&copy; 2026 ARc doc (Universal Studio). Built with Open-Source Client-Side Technologies.</p>
+        <p>&copy; 2026 ARc Doc (Universal Studio). Built with Open-Source Client-Side Technologies.</p>
     </footer>
 
     <!-- JavaScript Logic Engine -->
@@ -1009,8 +1009,8 @@
                 const pdfDoc = await PDFDocument.load(pdfaBuffer);
 
                 pdfDoc.setTitle(`${pdfaFile.name.split('.')[0]} (Archival Copy)`);
-                pdfDoc.setAuthor("ARc doc Universal Studio");
-                pdfDoc.setProducer("ARc doc ISO 19005-1 PDF/A-1b Engine");
+                pdfDoc.setAuthor("ARc Doc Universal Studio");
+                pdfDoc.setProducer("ARc Doc ISO 19005-1 PDF/A-1b Engine");
                 pdfDoc.setCreationDate(new Date());
 
                 const pdfaBytes = await pdfDoc.save();
