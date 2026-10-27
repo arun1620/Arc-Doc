@@ -1,9 +1,9 @@
-<!DocTYPE html>
+<!docTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARc Doc - Universal Document & File Studio</title>
+    <title>ARc doc - Universal document & File Studio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font: Plus Jakarta Sans -->
@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="https://unpkg.com/Docx@7.3.0/build/index.js"></script>
+    <script src="https://unpkg.com/docx@7.3.0/build/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
@@ -42,7 +42,7 @@
                     A
                 </div>
                 <div>
-                    <h1 class="text-xl font-extrabold tracking-tight text-slate-900 leading-none">ARc Doc</h1>
+                    <h1 class="text-xl font-extrabold tracking-tight text-slate-900 leading-none">ARc doc</h1>
                     <span class="text-[11px] font-semibold text-blue-600 tracking-wide uppercase">Universal File Suite</span>
                 </div>
             </div>
@@ -59,13 +59,13 @@
     <!-- Hero Title -->
     <div class="text-center pt-7 pb-2 px-4">
         <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 mb-2">
-            ✨ Professional Document & File Studio
+            ✨ Professional document & File Studio
         </div>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Universal <span class="gradient-text">Document Studio</span>
+            Universal <span class="gradient-text">document Studio</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mt-1 font-medium">
-            Fast, secure, and ultra-high-definition Document conversions in your browser.
+            Fast, secure, and ultra-high-definition document conversions in your browser.
         </p>
     </div>
 
@@ -125,8 +125,8 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">Exact File Size Resizer</h3>
             <p class="text-xs text-slate-500 mb-5">Set target KB higher (to increase) or lower (to compress) with 100% byte accuracy.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-blue-50/30" onclick="Document.getElementById('allDocsInput').click()">
-                <input type="file" id="allDocsInput" accept=".pdf, .Docx, .xlsx, .xls, .csv, image/jpeg, image/png, image/webp" class="hidden" onchange="handleAllDocsInput(event)">
+            <div class="border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-blue-50/30" onclick="document.getElementById('alldocsInput').click()">
+                <input type="file" id="alldocsInput" accept=".pdf, .docx, .xlsx, .xls, .csv, image/jpeg, image/png, image/webp" class="hidden" onchange="handleAlldocsInput(event)">
                 <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 </div>
@@ -134,35 +134,35 @@
                 <p class="text-[11px] text-slate-400 mt-0.5">High-accuracy compression & expansion</p>
             </div>
 
-            <div id="allDocsResultBox" class="hidden mt-5 space-y-3">
+            <div id="alldocsResultBox" class="hidden mt-5 space-y-3">
                 <div class="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200">
                     <div class="flex items-center space-x-2.5 truncate">
-                        <div id="fileTypeIconContainer" class="w-8 h-8 rounded-lg flex items-center justify-center font-black text-[10px] text-white uppercase shadow-sm">Doc</div>
-                        <p id="DocFileName" class="text-xs font-bold text-slate-800 truncate max-w-xs"></p>
+                        <div id="fileTypeIconContainer" class="w-8 h-8 rounded-lg flex items-center justify-center font-black text-[10px] text-white uppercase shadow-sm">doc</div>
+                        <p id="docFileName" class="text-xs font-bold text-slate-800 truncate max-w-xs"></p>
                     </div>
-                    <button onclick="Document.getElementById('allDocsInput').click()" class="text-[11px] font-bold text-blue-600 bg-white px-2.5 py-1 rounded-md border shadow-sm">Change</button>
+                    <button onclick="document.getElementById('alldocsInput').click()" class="text-[11px] font-bold text-blue-600 bg-white px-2.5 py-1 rounded-md border shadow-sm">Change</button>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5 text-center">
                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
                         <span class="text-[10px] font-bold text-slate-400 uppercase block">Original Size</span>
-                        <span id="DocOriginalSize" class="text-sm font-extrabold text-slate-700">-</span>
+                        <span id="docOriginalSize" class="text-sm font-extrabold text-slate-700">-</span>
                     </div>
                     <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
                         <span class="text-[10px] font-bold text-emerald-600 uppercase block">Target Output</span>
-                        <span id="DocNewSize" class="text-sm font-extrabold text-emerald-700">-</span>
+                        <span id="docNewSize" class="text-sm font-extrabold text-emerald-700">-</span>
                     </div>
                 </div>
 
                 <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
                     <label class="block text-xs font-bold text-slate-700 mb-1">Enter Target Size (KB):</label>
                     <div class="flex space-x-2">
-                        <input type="number" id="allDocTargetKb" placeholder="e.g. 50 or 200" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs font-bold focus:border-blue-600 outline-none bg-white">
+                        <input type="number" id="alldocTargetKb" placeholder="e.g. 50 or 200" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs font-bold focus:border-blue-600 outline-none bg-white">
                         <button onclick="applyExactTargetKb()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-xs whitespace-nowrap shadow-sm">Apply Exact KB</button>
                     </div>
                 </div>
 
-                <button id="downloadAllDocBtn" onclick="downloadAdjustedDoc()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
+                <button id="downloadAlldocBtn" onclick="downloadAdjusteddoc()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Download Resized File
                 </button>
             </div>
@@ -171,9 +171,9 @@
         <!-- 2. JPG TO PDF -->
         <section id="sec-jpg2pdf" class="tab-content hidden bg-white p-6 sm:p-7 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
             <h3 class="text-base font-bold text-slate-900 mb-1">JPG to PDF Converter</h3>
-            <p class="text-xs text-slate-500 mb-5">Combine images into a crystal-clear 300 DPI PDF Document.</p>
+            <p class="text-xs text-slate-500 mb-5">Combine images into a crystal-clear 300 DPI PDF document.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-rose-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-rose-50/30" onclick="Document.getElementById('imgPdfInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-rose-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-rose-50/30" onclick="document.getElementById('imgPdfInput').click()">
                 <input type="file" id="imgPdfInput" accept="image/jpeg, image/png, image/webp" multiple class="hidden" onchange="handleImagePdfSelect(event)">
                 <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
@@ -185,7 +185,7 @@
             <div id="imgPdfBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-rose-50 rounded-xl border border-rose-100 flex justify-between items-center">
                     <span id="imgSelectedText" class="text-xs font-bold text-rose-800"></span>
-                    <button onclick="Document.getElementById('imgPdfInput').click()" class="text-[11px] font-bold text-rose-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('imgPdfInput').click()" class="text-[11px] font-bold text-rose-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="imgPdfDownloadBtn" onclick="downloadImageAsPdf()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download High-Def PDF
@@ -198,7 +198,7 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">PDF to JPG Converter</h3>
             <p class="text-xs text-slate-500 mb-5">Extract Ultra-HD 300 DPI JPG images from your PDF pages.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-amber-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-amber-50/30" onclick="Document.getElementById('pdfJpgInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-amber-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-amber-50/30" onclick="document.getElementById('pdfJpgInput').click()">
                 <input type="file" id="pdfJpgInput" accept=".pdf" class="hidden" onchange="handlePdfForJpg(event)">
                 <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
@@ -210,7 +210,7 @@
             <div id="pdfJpgDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-amber-50 rounded-xl border border-amber-100 flex justify-between items-center">
                     <span id="pdfJpgNameText" class="text-xs font-bold text-amber-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pdfJpgInput').click()" class="text-[11px] font-bold text-amber-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pdfJpgInput').click()" class="text-[11px] font-bold text-amber-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pdfJpgDownloadBtn" onclick="convertPdfToJpg()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Extract & Download Ultra-HD JPGs
@@ -220,21 +220,21 @@
 
         <!-- 4. WORD TO PDF -->
         <section id="sec-word2pdf" class="tab-content hidden bg-white p-6 sm:p-7 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
-            <h3 class="text-base font-bold text-slate-900 mb-1">Word to PDF (.Docx)</h3>
-            <p class="text-xs text-slate-500 mb-5">Convert Word Documents into crystal-clear vector PDF files.</p>
+            <h3 class="text-base font-bold text-slate-900 mb-1">Word to PDF (.docx)</h3>
+            <p class="text-xs text-slate-500 mb-5">Convert Word documents into crystal-clear vector PDF files.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-sky-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-sky-50/30" onclick="Document.getElementById('wordInput').click()">
-                <input type="file" id="wordInput" accept=".Docx" class="hidden" onchange="handleWordFile(event)">
+            <div class="border-2 border-dashed border-slate-300 hover:border-sky-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-sky-50/30" onclick="document.getElementById('wordInput').click()">
+                <input type="file" id="wordInput" accept=".docx" class="hidden" onchange="handleWordFile(event)">
                 <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                 </div>
-                <p class="text-xs font-bold text-slate-700">Upload Word (.Docx) Document</p>
+                <p class="text-xs font-bold text-slate-700">Upload Word (.docx) document</p>
             </div>
 
             <div id="wordDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-sky-50 rounded-xl border border-sky-100 flex justify-between items-center">
                     <span id="wordFileNameText" class="text-xs font-bold text-sky-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('wordInput').click()" class="text-[11px] font-bold text-sky-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('wordInput').click()" class="text-[11px] font-bold text-sky-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <div class="border rounded-xl p-3 bg-slate-50 max-h-36 overflow-y-auto text-xs text-slate-700" id="wordPreviewContainer">
                     <div id="wordPreview" class="prose max-w-none text-xs"></div>
@@ -247,24 +247,24 @@
 
         <!-- 5. PDF TO WORD -->
         <section id="sec-pdf2word" class="tab-content hidden bg-white p-6 sm:p-7 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
-            <h3 class="text-base font-bold text-slate-900 mb-1">PDF to Word (.Docx)</h3>
-            <p class="text-xs text-slate-500 mb-5">Extract clean text and layout from PDF into an editable Word Document.</p>
+            <h3 class="text-base font-bold text-slate-900 mb-1">PDF to Word (.docx)</h3>
+            <p class="text-xs text-slate-500 mb-5">Extract clean text and layout from PDF into an editable Word document.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-blue-50/30" onclick="Document.getElementById('pdfWordInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-blue-50/30" onclick="document.getElementById('pdfWordInput').click()">
                 <input type="file" id="pdfWordInput" accept=".pdf" class="hidden" onchange="handlePdfForWord(event)">
                 <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 </div>
-                <p class="text-xs font-bold text-slate-700">Upload PDF Document</p>
+                <p class="text-xs font-bold text-slate-700">Upload PDF document</p>
             </div>
 
             <div id="pdfWordDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-blue-50 rounded-xl border border-blue-100 flex justify-between items-center">
                     <span id="pdfWordNameText" class="text-xs font-bold text-blue-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pdfWordInput').click()" class="text-[11px] font-bold text-blue-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pdfWordInput').click()" class="text-[11px] font-bold text-blue-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pdfWordDownloadBtn" onclick="convertPdfToWord()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
-                    Convert & Download Word (.Docx)
+                    Convert & Download Word (.docx)
                 </button>
             </div>
         </section>
@@ -274,7 +274,7 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">PowerPoint to PDF (.pptx)</h3>
             <p class="text-xs text-slate-500 mb-5">Convert presentations directly into high-resolution printable PDF slides.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-orange-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-orange-50/30" onclick="Document.getElementById('pptPdfInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-orange-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-orange-50/30" onclick="document.getElementById('pptPdfInput').click()">
                 <input type="file" id="pptPdfInput" accept=".pptx" class="hidden" onchange="handlePptForPdf(event)">
                 <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
@@ -285,7 +285,7 @@
             <div id="pptPdfDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-orange-50 rounded-xl border border-orange-100 flex justify-between items-center">
                     <span id="pptPdfNameText" class="text-xs font-bold text-orange-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pptPdfInput').click()" class="text-[11px] font-bold text-orange-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pptPdfInput').click()" class="text-[11px] font-bold text-orange-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pptPdfDownloadBtn" onclick="convertPptToPdf()" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download PDF Slides
@@ -298,18 +298,18 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">PDF to PowerPoint (.pptx)</h3>
             <p class="text-xs text-slate-500 mb-5">Convert PDF pages into high-clarity 16:9 presentation slides.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-red-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-red-50/30" onclick="Document.getElementById('pdfPptInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-red-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-red-50/30" onclick="document.getElementById('pdfPptInput').click()">
                 <input type="file" id="pdfPptInput" accept=".pdf" class="hidden" onchange="handlePdfForPpt(event)">
                 <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 </div>
-                <p class="text-xs font-bold text-slate-700">Upload PDF Document</p>
+                <p class="text-xs font-bold text-slate-700">Upload PDF document</p>
             </div>
 
             <div id="pdfPptDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-red-50 rounded-xl border border-red-100 flex justify-between items-center">
                     <span id="pdfPptNameText" class="text-xs font-bold text-red-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pdfPptInput').click()" class="text-[11px] font-bold text-red-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pdfPptInput').click()" class="text-[11px] font-bold text-red-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pdfPptDownloadBtn" onclick="convertPdfToPpt()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download PowerPoint (.pptx)
@@ -322,7 +322,7 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">Excel to PDF (.xlsx / .csv)</h3>
             <p class="text-xs text-slate-500 mb-5">Convert spreadsheet tables into sharp, formatted landscape PDF reports.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-emerald-50/30" onclick="Document.getElementById('excelInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-emerald-50/30" onclick="document.getElementById('excelInput').click()">
                 <input type="file" id="excelInput" accept=".xlsx, .xls, .csv" class="hidden" onchange="handleExcelFile(event)">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
@@ -333,7 +333,7 @@
             <div id="excelDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 flex justify-between items-center">
                     <span id="excelFileNameText" class="text-xs font-bold text-emerald-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('excelInput').click()" class="text-[11px] font-bold text-emerald-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('excelInput').click()" class="text-[11px] font-bold text-emerald-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button onclick="generateExcelPdf()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download PDF
@@ -346,7 +346,7 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">PDF to Excel (.xlsx)</h3>
             <p class="text-xs text-slate-500 mb-5">Accurately extract rows and tabular columns into Excel.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-teal-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-teal-50/30" onclick="Document.getElementById('pdfExcelInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-teal-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-teal-50/30" onclick="document.getElementById('pdfExcelInput').click()">
                 <input type="file" id="pdfExcelInput" accept=".pdf" class="hidden" onchange="handlePdfForExcel(event)">
                 <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
@@ -357,7 +357,7 @@
             <div id="pdfExcelDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-teal-50 rounded-xl border border-teal-100 flex justify-between items-center">
                     <span id="pdfExcelNameText" class="text-xs font-bold text-teal-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pdfExcelInput').click()" class="text-[11px] font-bold text-teal-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pdfExcelInput').click()" class="text-[11px] font-bold text-teal-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pdfExcelDownloadBtn" onclick="convertPdfToExcel()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download Excel (.xlsx)
@@ -370,7 +370,7 @@
             <h3 class="text-base font-bold text-slate-900 mb-1">PDF to PDF/A (Archival Standard)</h3>
             <p class="text-xs text-slate-500 mb-5">Convert standard PDF into ISO-compliant archival format for legal and long-term storage.</p>
 
-            <div class="border-2 border-dashed border-slate-300 hover:border-cyan-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-cyan-50/30" onclick="Document.getElementById('pdfaInput').click()">
+            <div class="border-2 border-dashed border-slate-300 hover:border-cyan-500 rounded-2xl p-7 text-center cursor-pointer transition bg-slate-50/50 hover:bg-cyan-50/30" onclick="document.getElementById('pdfaInput').click()">
                 <input type="file" id="pdfaInput" accept=".pdf" class="hidden" onchange="handlePdfForPdfa(event)">
                 <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-2 shadow-inner">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -381,7 +381,7 @@
             <div id="pdfaDetailsBox" class="hidden mt-5 space-y-3">
                 <div class="p-3 bg-cyan-50 rounded-xl border border-cyan-100 flex justify-between items-center">
                     <span id="pdfaNameText" class="text-xs font-bold text-cyan-900 truncate max-w-xs"></span>
-                    <button onclick="Document.getElementById('pdfaInput').click()" class="text-[11px] font-bold text-cyan-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
+                    <button onclick="document.getElementById('pdfaInput').click()" class="text-[11px] font-bold text-cyan-700 bg-white px-2.5 py-1 rounded-md border">Change</button>
                 </div>
                 <button id="pdfaDownloadBtn" onclick="convertPdfToPdfA()" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 rounded-xl text-xs shadow-md transition">
                     Convert & Download ISO PDF/A
@@ -430,7 +430,7 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-5 text-center text-xs text-slate-400">
-        <p>&copy; 2026 ARc Doc (Universal Studio). Built with Open-Source Client-Side Technologies.</p>
+        <p>&copy; 2026 ARc doc (Universal Studio). Built with Open-Source Client-Side Technologies.</p>
     </footer>
 
     <!-- JavaScript Logic Engine -->
@@ -448,77 +448,77 @@
         }
 
         function switchTab(tab) {
-            Document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            Document.querySelectorAll('.tab-chip').forEach(btn => {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-chip').forEach(btn => {
                 btn.className = "tab-chip px-3 py-1.5 rounded-lg text-[11px] font-bold border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1.5";
             });
 
-            Document.getElementById(`sec-${tab}`).classList.remove('hidden');
-            const activeBtn = Document.getElementById(`btn-${tab}`);
+            document.getElementById(`sec-${tab}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-${tab}`);
             activeBtn.className = "tab-chip px-3 py-1.5 rounded-lg text-[11px] font-bold border transition flex items-center space-x-1.5 bg-blue-600 text-white border-blue-600 shadow-sm";
         }
 
         // 1. EXACT TARGET KB (PRECISION BIDIRECTIONAL)
-        let uploadedDocFile = null, uploadedDocBuffer = null, finalAdjustedDocBlob = null, DocCategory = '';
+        let uploadeddocFile = null, uploadeddocBuffer = null, finalAdjusteddocBlob = null, docCategory = '';
 
-        function handleAllDocsInput(e) {
+        function handleAlldocsInput(e) {
             const file = e.target.files[0];
             if (!file) return;
-            uploadedDocFile = file;
+            uploadeddocFile = file;
 
             const ext = file.name.split('.').pop().toLowerCase();
-            Document.getElementById('DocFileName').innerText = file.name;
-            Document.getElementById('DocOriginalSize').innerText = formatBytes(file.size);
-            Document.getElementById('allDocsResultBox').classList.remove('hidden');
+            document.getElementById('docFileName').innerText = file.name;
+            document.getElementById('docOriginalSize').innerText = formatBytes(file.size);
+            document.getElementById('alldocsResultBox').classList.remove('hidden');
 
-            const iconContainer = Document.getElementById('fileTypeIconContainer');
+            const iconContainer = document.getElementById('fileTypeIconContainer');
             if (['jpg', 'jpeg', 'png', 'webp'].includes(ext)) {
-                DocCategory = 'image';
+                docCategory = 'image';
                 iconContainer.className = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[10px] text-white uppercase bg-amber-500 shadow-sm";
                 iconContainer.innerText = ext.toUpperCase();
             } else if (ext === 'pdf') {
-                DocCategory = 'pdf';
+                docCategory = 'pdf';
                 iconContainer.className = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[10px] text-white uppercase bg-rose-600 shadow-sm";
                 iconContainer.innerText = "PDF";
             } else {
-                DocCategory = 'office';
+                docCategory = 'office';
                 iconContainer.className = "w-8 h-8 rounded-lg flex items-center justify-center font-bold text-[10px] text-white uppercase bg-blue-600 shadow-sm";
                 iconContainer.innerText = ext.toUpperCase();
             }
 
             const reader = new FileReader();
             reader.onload = function(evt) {
-                uploadedDocBuffer = evt.target.result;
-                finalAdjustedDocBlob = new Blob([uploadedDocBuffer], { type: file.type || 'application/octet-stream' });
-                Document.getElementById('DocNewSize').innerText = formatBytes(finalAdjustedDocBlob.size);
+                uploadeddocBuffer = evt.target.result;
+                finalAdjusteddocBlob = new Blob([uploadeddocBuffer], { type: file.type || 'application/octet-stream' });
+                document.getElementById('docNewSize').innerText = formatBytes(finalAdjusteddocBlob.size);
             };
             reader.readAsArrayBuffer(file);
         }
 
         async function applyExactTargetKb() {
-            const inputVal = parseFloat(Document.getElementById('allDocTargetKb').value);
+            const inputVal = parseFloat(document.getElementById('alldocTargetKb').value);
             if (!inputVal || inputVal <= 0) {
                 alert("Please enter a valid target KB value!");
                 return;
             }
 
             const targetBytes = Math.round(inputVal * 1024);
-            const currentBytes = uploadedDocBuffer.byteLength;
-            const btn = Document.getElementById('downloadAllDocBtn');
+            const currentBytes = uploadeddocBuffer.byteLength;
+            const btn = document.getElementById('downloadAlldocBtn');
             btn.innerText = "Calculating Exact Size...";
             btn.disabled = true;
 
             try {
                 if (targetBytes >= currentBytes) {
                     const diff = targetBytes - currentBytes;
-                    finalAdjustedDocBlob = new Blob([uploadedDocBuffer, new Uint8Array(diff)], { type: uploadedDocFile.type || 'application/octet-stream' });
+                    finalAdjusteddocBlob = new Blob([uploadeddocBuffer, new Uint8Array(diff)], { type: uploadeddocFile.type || 'application/octet-stream' });
                 } else {
-                    if (DocCategory === 'image') {
+                    if (docCategory === 'image') {
                         const img = new Image();
-                        img.src = URL.createObjectURL(uploadedDocFile);
+                        img.src = URL.createObjectURL(uploadeddocFile);
                         await new Promise(r => img.onload = r);
 
-                        let canvas = Document.createElement('canvas');
+                        let canvas = document.createElement('canvas');
                         let ctx = canvas.getContext('2d');
                         let scale = 1.0, bestBlob = null;
                         canvas.width = img.width;
@@ -548,12 +548,12 @@
 
                         if (bestBlob && bestBlob.size < targetBytes) {
                             const diff = targetBytes - bestBlob.size;
-                            finalAdjustedDocBlob = new Blob([bestBlob, new Uint8Array(diff)], { type: 'image/jpeg' });
+                            finalAdjusteddocBlob = new Blob([bestBlob, new Uint8Array(diff)], { type: 'image/jpeg' });
                         } else {
-                            finalAdjustedDocBlob = bestBlob;
+                            finalAdjusteddocBlob = bestBlob;
                         }
-                    } else if (DocCategory === 'pdf') {
-                        const pdfDoc = await pdfjsLib.getDocument({ data: uploadedDocBuffer }).promise;
+                    } else if (docCategory === 'pdf') {
+                        const pdfdoc = await pdfjsLib.getdocument({ data: uploadeddocBuffer }).promise;
                         const { jsPDF } = window.jspdf;
                         let scale = Math.min(1.0, Math.max(0.35, Math.sqrt(targetBytes / currentBytes)));
                         let quality = Math.min(0.8, Math.max(0.15, targetBytes / currentBytes));
@@ -562,11 +562,11 @@
                         const pw = newPdf.internal.pageSize.getWidth();
                         const ph = newPdf.internal.pageSize.getHeight();
 
-                        for (let i = 1; i <= pdfDoc.numPages; i++) {
+                        for (let i = 1; i <= pdfdoc.numPages; i++) {
                             if (i > 1) newPdf.addPage();
-                            const page = await pdfDoc.getPage(i);
+                            const page = await pdfdoc.getPage(i);
                             const viewport = page.getViewport({ scale: scale });
-                            const canvas = Document.createElement('canvas');
+                            const canvas = document.createElement('canvas');
                             canvas.width = viewport.width;
                             canvas.height = viewport.height;
                             await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
@@ -576,27 +576,27 @@
                         let compressedBlob = newPdf.output('blob');
                         if (compressedBlob.size < targetBytes) {
                             const diff = targetBytes - compressedBlob.size;
-                            finalAdjustedDocBlob = new Blob([compressedBlob, new Uint8Array(diff)], { type: 'application/pdf' });
+                            finalAdjusteddocBlob = new Blob([compressedBlob, new Uint8Array(diff)], { type: 'application/pdf' });
                         } else {
-                            finalAdjustedDocBlob = compressedBlob;
+                            finalAdjusteddocBlob = compressedBlob;
                         }
                     } else {
                         try {
-                            const zip = await JSZip.loadAsync(uploadedDocBuffer);
+                            const zip = await JSZip.loadAsync(uploadeddocBuffer);
                             const compressedZipBlob = await zip.generateAsync({ type: "blob", compression: "DEFLATE", compressionOptions: { level: 9 } });
                             if (compressedZipBlob.size < targetBytes) {
                                 const diff = targetBytes - compressedZipBlob.size;
-                                finalAdjustedDocBlob = new Blob([compressedZipBlob, new Uint8Array(diff)], { type: uploadedDocFile.type });
+                                finalAdjusteddocBlob = new Blob([compressedZipBlob, new Uint8Array(diff)], { type: uploadeddocFile.type });
                             } else {
-                                finalAdjustedDocBlob = compressedZipBlob;
+                                finalAdjusteddocBlob = compressedZipBlob;
                             }
                         } catch (e) {
-                            finalAdjustedDocBlob = new Blob([uploadedDocBuffer]);
+                            finalAdjusteddocBlob = new Blob([uploadeddocBuffer]);
                         }
                     }
                 }
 
-                Document.getElementById('DocNewSize').innerText = (finalAdjustedDocBlob.size / 1024).toFixed(2) + " KB";
+                document.getElementById('docNewSize').innerText = (finalAdjusteddocBlob.size / 1024).toFixed(2) + " KB";
                 btn.innerText = "Download Resized File";
                 btn.disabled = false;
             } catch (err) {
@@ -605,14 +605,14 @@
             }
         }
 
-        function downloadAdjustedDoc() {
-            if (!finalAdjustedDocBlob) return;
-            const a = Document.createElement('a');
-            a.href = URL.createObjectURL(finalAdjustedDocBlob);
-            a.download = `ARc-exact-${uploadedDocFile.name}`;
-            Document.body.appendChild(a);
+        function downloadAdjusteddoc() {
+            if (!finalAdjusteddocBlob) return;
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(finalAdjusteddocBlob);
+            a.download = `ARc-exact-${uploadeddocFile.name}`;
+            document.body.appendChild(a);
             a.click();
-            Document.body.removeChild(a);
+            document.body.removeChild(a);
         }
 
         // 2. JPG TO PDF (300 DPI Ultra Clear)
@@ -620,8 +620,8 @@
         function handleImagePdfSelect(e) {
             selectedImages = Array.from(e.target.files);
             if (selectedImages.length === 0) return;
-            Document.getElementById('imgPdfBox').classList.remove('hidden');
-            Document.getElementById('imgSelectedText').innerText = `${selectedImages.length} Image(s) Selected`;
+            document.getElementById('imgPdfBox').classList.remove('hidden');
+            document.getElementById('imgSelectedText').innerText = `${selectedImages.length} Image(s) Selected`;
         }
 
         function fileToCleanJpegDataUrl(file) {
@@ -630,7 +630,7 @@
                 reader.onload = (e) => {
                     const img = new Image();
                     img.onload = () => {
-                        const canvas = Document.createElement('canvas');
+                        const canvas = document.createElement('canvas');
                         canvas.width = img.width;
                         canvas.height = img.height;
                         const ctx = canvas.getContext('2d');
@@ -665,12 +665,12 @@
             }
 
             const pdfBlob = pdf.output('blob');
-            const a = Document.createElement('a');
+            const a = document.createElement('a');
             a.href = URL.createObjectURL(pdfBlob);
-            a.download = "ARc-Doc-images.pdf";
-            Document.body.appendChild(a);
+            a.download = "ARc-doc-images.pdf";
+            document.body.appendChild(a);
             a.click();
-            Document.body.removeChild(a);
+            document.body.removeChild(a);
         }
 
         // 3. PDF TO JPG (Scale 2.5 Ultra-HD)
@@ -679,8 +679,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pdfForJpgFile = file;
-            Document.getElementById('pdfJpgNameText').innerText = file.name;
-            Document.getElementById('pdfJpgDetailsBox').classList.remove('hidden');
+            document.getElementById('pdfJpgNameText').innerText = file.name;
+            document.getElementById('pdfJpgDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pdfForJpgBuffer = evt.target.result;
@@ -689,26 +689,26 @@
 
         async function convertPdfToJpg() {
             if (!pdfForJpgBuffer) return;
-            const btn = Document.getElementById('pdfJpgDownloadBtn');
+            const btn = document.getElementById('pdfJpgDownloadBtn');
             btn.innerText = "Extracting Ultra-HD JPG...";
             btn.disabled = true;
 
             try {
-                const pdfDoc = await pdfjsLib.getDocument({ data: pdfForJpgBuffer }).promise;
-                for (let i = 1; i <= Math.min(pdfDoc.numPages, 5); i++) {
-                    const page = await pdfDoc.getPage(i);
+                const pdfdoc = await pdfjsLib.getdocument({ data: pdfForJpgBuffer }).promise;
+                for (let i = 1; i <= Math.min(pdfdoc.numPages, 5); i++) {
+                    const page = await pdfdoc.getPage(i);
                     const viewport = page.getViewport({ scale: 2.5 });
-                    const canvas = Document.createElement('canvas');
+                    const canvas = document.createElement('canvas');
                     canvas.width = viewport.width;
                     canvas.height = viewport.height;
                     await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
 
-                    const a = Document.createElement('a');
+                    const a = document.createElement('a');
                     a.href = canvas.toDataURL('image/jpeg', 0.98);
                     a.download = `${pdfForJpgFile.name.split('.')[0]}_Page_${i}.jpg`;
-                    Document.body.appendChild(a);
+                    document.body.appendChild(a);
                     a.click();
-                    Document.body.removeChild(a);
+                    document.body.removeChild(a);
                 }
                 btn.innerText = "Extract & Download Ultra-HD JPGs";
                 btn.disabled = false;
@@ -724,13 +724,13 @@
             const file = e.target.files[0];
             if (!file) return;
             currentWordFile = file;
-            Document.getElementById('wordFileNameText').innerText = file.name;
-            Document.getElementById('wordDetailsBox').classList.remove('hidden');
+            document.getElementById('wordFileNameText').innerText = file.name;
+            document.getElementById('wordDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = function(evt) {
                 mammoth.convertToHtml({ arrayBuffer: evt.target.result })
-                    .then(result => Document.getElementById('wordPreview').innerHTML = result.value || "<p>Empty Document</p>");
+                    .then(result => document.getElementById('wordPreview').innerHTML = result.value || "<p>Empty document</p>");
             };
             reader.readAsArrayBuffer(file);
         }
@@ -743,7 +743,7 @@
                 html2canvas: { scale: 3, useCORS: true, letterRendering: true },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            html2pdf().set(opt).from(Document.getElementById('wordPreview')).save();
+            html2pdf().set(opt).from(document.getElementById('wordPreview')).save();
         }
 
         // 5. PDF TO WORD
@@ -752,8 +752,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pdfForWordFile = file;
-            Document.getElementById('pdfWordNameText').innerText = file.name;
-            Document.getElementById('pdfWordDetailsBox').classList.remove('hidden');
+            document.getElementById('pdfWordNameText').innerText = file.name;
+            document.getElementById('pdfWordDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pdfForWordBuffer = evt.target.result;
@@ -762,39 +762,39 @@
 
         async function convertPdfToWord() {
             if (!pdfForWordBuffer) return;
-            const btn = Document.getElementById('pdfWordDownloadBtn');
-            btn.innerText = "Creating Word (.Docx)...";
+            const btn = document.getElementById('pdfWordDownloadBtn');
+            btn.innerText = "Creating Word (.docx)...";
             btn.disabled = true;
 
             try {
-                const pdfDoc = await pdfjsLib.getDocument({ data: pdfForWordBuffer }).promise;
-                const { Document, Packer, Paragraph, TextRun } = Docx;
-                const DocChildren = [];
+                const pdfdoc = await pdfjsLib.getdocument({ data: pdfForWordBuffer }).promise;
+                const { document, Packer, Paragraph, TextRun } = docx;
+                const docChildren = [];
 
-                for (let i = 1; i <= pdfDoc.numPages; i++) {
-                    const page = await pdfDoc.getPage(i);
+                for (let i = 1; i <= pdfdoc.numPages; i++) {
+                    const page = await pdfdoc.getPage(i);
                     const textContent = await page.getTextContent();
                     let currentLine = "";
                     textContent.items.forEach(item => currentLine += item.str + " ");
 
                     if (currentLine.trim()) {
-                        DocChildren.push(new Paragraph({
+                        docChildren.push(new Paragraph({
                             children: [new TextRun({ text: currentLine.trim(), size: 22 })],
                             spacing: { after: 200 }
                         }));
                     }
                 }
 
-                const Doc = new Document({ sections: [{ children: DocChildren }] });
-                const blob = await Packer.toBlob(Doc);
-                const a = Document.createElement('a');
+                const doc = new document({ sections: [{ children: docChildren }] });
+                const blob = await Packer.toBlob(doc);
+                const a = document.createElement('a');
                 a.href = URL.createObjectURL(blob);
-                a.download = `${pdfForWordFile.name.split('.')[0]}.Docx`;
-                Document.body.appendChild(a);
+                a.download = `${pdfForWordFile.name.split('.')[0]}.docx`;
+                document.body.appendChild(a);
                 a.click();
-                Document.body.removeChild(a);
+                document.body.removeChild(a);
 
-                btn.innerText = "Convert & Download Word (.Docx)";
+                btn.innerText = "Convert & Download Word (.docx)";
                 btn.disabled = false;
             } catch (err) {
                 alert("Error: " + err.message);
@@ -808,8 +808,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pptPdfFile = file;
-            Document.getElementById('pptPdfNameText').innerText = file.name;
-            Document.getElementById('pptPdfDetailsBox').classList.remove('hidden');
+            document.getElementById('pptPdfNameText').innerText = file.name;
+            document.getElementById('pptPdfDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pptPdfBuffer = evt.target.result;
@@ -818,7 +818,7 @@
 
         async function convertPptToPdf() {
             if (!pptPdfBuffer) return;
-            const btn = Document.getElementById('pptPdfDownloadBtn');
+            const btn = document.getElementById('pptPdfDownloadBtn');
             btn.innerText = "Generating PDF...";
             btn.disabled = true;
 
@@ -835,8 +835,8 @@
 
                         const xmlText = await zip.files[filename].async("text");
                         const parser = new DOMParser();
-                        const xmlDoc = parser.parseFromString(xmlText, "application/xml");
-                        const textNodes = xmlDoc.getElementsByTagName("a:t");
+                        const xmldoc = parser.parseFromString(xmlText, "application/xml");
+                        const textNodes = xmldoc.getElementsByTagName("a:t");
 
                         pdf.setFontSize(16);
                         pdf.text(`Slide ${slideIndex}`, 14, 20);
@@ -867,8 +867,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pdfPptFile = file;
-            Document.getElementById('pdfPptNameText').innerText = file.name;
-            Document.getElementById('pdfPptDetailsBox').classList.remove('hidden');
+            document.getElementById('pdfPptNameText').innerText = file.name;
+            document.getElementById('pdfPptDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pdfPptBuffer = evt.target.result;
@@ -877,19 +877,19 @@
 
         async function convertPdfToPpt() {
             if (!pdfPptBuffer) return;
-            const btn = Document.getElementById('pdfPptDownloadBtn');
+            const btn = document.getElementById('pdfPptDownloadBtn');
             btn.innerText = "Creating Slides...";
             btn.disabled = true;
 
             try {
-                const pdfDoc = await pdfjsLib.getDocument({ data: pdfPptBuffer }).promise;
+                const pdfdoc = await pdfjsLib.getdocument({ data: pdfPptBuffer }).promise;
                 let pptx = new PptxGenJS();
                 pptx.layout = 'LAYOUT_WIDE';
 
-                for (let i = 1; i <= pdfDoc.numPages; i++) {
-                    const page = await pdfDoc.getPage(i);
+                for (let i = 1; i <= pdfdoc.numPages; i++) {
+                    const page = await pdfdoc.getPage(i);
                     const viewport = page.getViewport({ scale: 2.2 });
-                    const canvas = Document.createElement('canvas');
+                    const canvas = document.createElement('canvas');
                     canvas.width = viewport.width;
                     canvas.height = viewport.height;
                     await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
@@ -912,8 +912,8 @@
             const file = e.target.files[0];
             if (!file) return;
             currentExcelFile = file;
-            Document.getElementById('excelFileNameText').innerText = file.name;
-            Document.getElementById('excelDetailsBox').classList.remove('hidden');
+            document.getElementById('excelFileNameText').innerText = file.name;
+            document.getElementById('excelDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = function(evt) {
@@ -928,9 +928,9 @@
         function generateExcelPdf() {
             if (!excelParsedData) return;
             const { jsPDF } = window.jspdf;
-            const Doc = new jsPDF('l', 'pt');
-            Doc.autoTable({ head: [excelParsedData[0]], body: excelParsedData.slice(1), theme: 'striped', styles: { fontSize: 8 } });
-            Doc.save(`${currentExcelFile.name.split('.')[0]}.pdf`);
+            const doc = new jsPDF('l', 'pt');
+            doc.autoTable({ head: [excelParsedData[0]], body: excelParsedData.slice(1), theme: 'striped', styles: { fontSize: 8 } });
+            doc.save(`${currentExcelFile.name.split('.')[0]}.pdf`);
         }
 
         // 9. PDF TO EXCEL
@@ -939,8 +939,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pdfExcelFile = file;
-            Document.getElementById('pdfExcelNameText').innerText = file.name;
-            Document.getElementById('pdfExcelDetailsBox').classList.remove('hidden');
+            document.getElementById('pdfExcelNameText').innerText = file.name;
+            document.getElementById('pdfExcelDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pdfExcelBuffer = evt.target.result;
@@ -949,16 +949,16 @@
 
         async function convertPdfToExcel() {
             if (!pdfExcelBuffer) return;
-            const btn = Document.getElementById('pdfExcelDownloadBtn');
+            const btn = document.getElementById('pdfExcelDownloadBtn');
             btn.innerText = "Extracting Excel...";
             btn.disabled = true;
 
             try {
-                const pdfDoc = await pdfjsLib.getDocument({ data: pdfExcelBuffer }).promise;
+                const pdfdoc = await pdfjsLib.getdocument({ data: pdfExcelBuffer }).promise;
                 let wb = XLSX.utils.book_new();
 
-                for (let i = 1; i <= pdfDoc.numPages; i++) {
-                    const page = await pdfDoc.getPage(i);
+                for (let i = 1; i <= pdfdoc.numPages; i++) {
+                    const page = await pdfdoc.getPage(i);
                     const textContent = await page.getTextContent();
                     let rowsMap = {};
 
@@ -990,8 +990,8 @@
             const file = e.target.files[0];
             if (!file) return;
             pdfaFile = file;
-            Document.getElementById('pdfaNameText').innerText = file.name;
-            Document.getElementById('pdfaDetailsBox').classList.remove('hidden');
+            document.getElementById('pdfaNameText').innerText = file.name;
+            document.getElementById('pdfaDetailsBox').classList.remove('hidden');
 
             const reader = new FileReader();
             reader.onload = (evt) => pdfaBuffer = evt.target.result;
@@ -1000,27 +1000,27 @@
 
         async function convertPdfToPdfA() {
             if (!pdfaBuffer) return;
-            const btn = Document.getElementById('pdfaDownloadBtn');
+            const btn = document.getElementById('pdfaDownloadBtn');
             btn.innerText = "Injecting PDF/A metadata...";
             btn.disabled = true;
 
             try {
-                const { PDFDocument } = PDFLib;
-                const pdfDoc = await PDFDocument.load(pdfaBuffer);
+                const { PDFdocument } = PDFLib;
+                const pdfdoc = await PDFdocument.load(pdfaBuffer);
 
-                pdfDoc.setTitle(`${pdfaFile.name.split('.')[0]} (Archival Copy)`);
-                pdfDoc.setAuthor("ARc Doc Universal Studio");
-                pdfDoc.setProducer("ARc Doc ISO 19005-1 PDF/A-1b Engine");
-                pdfDoc.setCreationDate(new Date());
+                pdfdoc.setTitle(`${pdfaFile.name.split('.')[0]} (Archival Copy)`);
+                pdfdoc.setAuthor("ARc doc Universal Studio");
+                pdfdoc.setProducer("ARc doc ISO 19005-1 PDF/A-1b Engine");
+                pdfdoc.setCreationDate(new Date());
 
-                const pdfaBytes = await pdfDoc.save();
+                const pdfaBytes = await pdfdoc.save();
                 const blob = new Blob([pdfaBytes], { type: 'application/pdf' });
-                const a = Document.createElement('a');
+                const a = document.createElement('a');
                 a.href = URL.createObjectURL(blob);
                 a.download = `${pdfaFile.name.split('.')[0]}_PDFA.pdf`;
-                Document.body.appendChild(a);
+                document.body.appendChild(a);
                 a.click();
-                Document.body.removeChild(a);
+                document.body.removeChild(a);
 
                 btn.innerText = "Convert & Download ISO PDF/A";
                 btn.disabled = false;
